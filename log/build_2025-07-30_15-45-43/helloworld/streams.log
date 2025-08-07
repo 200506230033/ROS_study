@@ -1,0 +1,31 @@
+[0.008s] Invoking command in '/home/zjh/unitree_go2_ws/build/helloworld': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/zjh/unitree_go2_ws/src/helloworld/helloworld -DCMAKE_INSTALL_PREFIX=/home/zjh/unitree_go2_ws/install/helloworld
+[0.015s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.117s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.134s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.136s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.139s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.146s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.153s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.174s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.174s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.238s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.276s] -- Configuring incomplete, errors occurred!
+[0.276s] See also "/home/zjh/unitree_go2_ws/build/helloworld/CMakeFiles/CMakeOutput.log".
+[0.276s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[0.276s]   By not providing "Findunitree_api.cmake" in CMAKE_MODULE_PATH this project
+[0.276s]   has asked CMake to find a package configuration file provided by
+[0.276s]   "unitree_api", but CMake did not find one.
+[0.276s] 
+[0.276s]   Could not find a package configuration file provided by "unitree_api" with
+[0.276s]   any of the following names:
+[0.276s] 
+[0.276s]     unitree_apiConfig.cmake
+[0.276s]     unitree_api-config.cmake
+[0.276s] 
+[0.276s]   Add the installation prefix of "unitree_api" to CMAKE_PREFIX_PATH or set
+[0.276s]   "unitree_api_DIR" to a directory containing one of the above files.  If
+[0.276s]   "unitree_api" provides a separate development package or SDK, be sure it
+[0.276s]   has been installed.
+[0.276s] 
+[0.276s] [0m
+[0.281s] Invoked command in '/home/zjh/unitree_go2_ws/build/helloworld' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/zjh/unitree_go2_ws/src/helloworld/helloworld -DCMAKE_INSTALL_PREFIX=/home/zjh/unitree_go2_ws/install/helloworld

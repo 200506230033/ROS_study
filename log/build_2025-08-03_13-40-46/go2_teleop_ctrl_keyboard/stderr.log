@@ -1,0 +1,5 @@
+  File "/home/zjh/unitree_go2_ws/install/go2_teleop_ctrl_keyboard/lib/python3.10/site-packages/go2_teleop_ctrl_keyboard/go2_teleop_strl_keyboard.py", line 56
+    'h' = ROBOT_SPORT_API_IDS["HELLO"],
+    ^^^
+SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?
+
