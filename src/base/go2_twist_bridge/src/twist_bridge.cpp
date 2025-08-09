@@ -8,6 +8,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "unitree_api/msg/request.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include "sport_model.hpp"
+#include "nlohmann/json.hpp"
 
 using namespace std::placeholders;
 
@@ -26,7 +28,29 @@ private:
   rclcpp::Publisher<unitree_api::msg::Request>::SharedPtr request_pub_;
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr twist_pub_;
   void twist_cb(const geometry_msgs::msg::Twist::SharedPtr twist){
-    
+    //3.在回调函数中实现消息转换和发布
+    unitree_api::msg::Request request;
+
+    //转换实现
+    //获取 twist 消息的线速度和角速度
+    double x = twist -> linear.x;
+    double y = twist -> linear.y;
+    double z = twist -> angular.z;
+    //默认api_id 为平衡站立
+    auto api_id = ROBOT_SPORT_API_ID_BALANCESTAND;
+    if( x != 0 || y != 0 || z != 0 ){
+      api_id = ROBOT_SPORT_API_ID_MOVE;
+
+      //设置参数
+      nlohmann::json js;
+      js["x"] = x;
+      js["y"] = y;
+      js["z"] = z;
+      request.parameter = js.dump();
+    }
+    request.header.identity.api_id = api_id;
+    request_pub_ -> publish(request);
+
   }
 };
 
